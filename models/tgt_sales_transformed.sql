@@ -1,3 +1,9 @@
+{{
+    config(
+        materialized='table'
+    )
+}}
+
 WITH sales_data AS (
     SELECT 
         t.region, 
@@ -14,4 +20,4 @@ SELECT
     region, 
     SUM(sales_in_usd) AS total_sales_usd
 FROM sales_data
-GROUP BY region;
+GROUP BY region
