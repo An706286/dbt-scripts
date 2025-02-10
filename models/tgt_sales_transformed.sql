@@ -10,7 +10,7 @@ WITH sales_data AS (
         t.sales, 
         t.currency, 
         c.rate_to_usd, 
-        t.sales * c.rate_to_usd AS sales_in_usd
+        t.sales * c.rate_to_usd AS sales_in_usd1
     FROM TGT t
     LEFT JOIN CURRENCY_RATES c
     ON t.currency = c.currency
